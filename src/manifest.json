@@ -1,0 +1,22 @@
+{
+  "name": "Translate Extension",
+  "version": "1.0",
+  "description": "Built by fatk1d",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://*/*"],
+  "action": {
+    "default_title": "Fatk1d's Translate Extention",
+    "default_popup": "extention.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "manifest_version": 3
+}
